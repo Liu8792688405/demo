@@ -1,0 +1,64 @@
+// 普通混合会编译到css文件中
+// .hunhe{
+// 	position: absolute;
+// 	left: 0;
+// 	right: 0;
+// 	top: 0;
+// 	bottom: 0;
+// 	background-color: yellow;
+// 	height: 100px;
+// 	width: 100px;
+// 	margin: auto;
+// }
+
+// 不带输出的混合，不会编译到css文件中
+// .hunhe(){
+// 	position: absolute;
+// 	left: 0;
+// 	right: 0;
+// 	top: 0;
+// 	bottom: 0;
+// 	background-color: yellow;
+// 	height: 100px;
+// 	width: 100px;
+// 	margin: auto;
+// }
+
+// 带多个参数的混合
+// .hunhe(@h,@w,@color){
+// 	position: absolute;
+// 	left: 0;
+// 	right: 0;
+// 	top: 0;
+// 	bottom: 0;
+// 	background-color: @color;
+// 	height: @h;
+// 	width: @w;
+// 	margin: auto;
+// }
+
+// 带多个参数并且含有默认值的混合
+.hunhe(@h,@w,@color:pink){
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: @color;
+	height: @h;
+	width: @w;
+	margin: auto;
+}
+#wrap{
+	position: relative;
+	width: 300px;
+	height: 400px;
+	border: 1px solid;
+	margin: 0 auto;
+	.inner1{
+		.hunhe(100px,100px);
+	}
+	.inner2{
+		.hunhe(200px,200px,red);
+	}
+}
