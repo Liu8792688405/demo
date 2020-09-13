@@ -1,0 +1,18 @@
+attribute:
+		HTML预定义属性
+		HTML自定义属性
+property:
+		js原生对象的直接属性
+		
+每一个预定义对象的attri都会有一个property与之对应
+
+布尔值属性: 
+非布尔值属性:
+
+非布尔值属性: property和attribute的同步问题
+	无论什么情况，property和attribute都会同步
+	
+布尔值属性: property和attribute的同步问题
+	1.改变property时不会同步attribute
+	2.在没有改变property时，attribute会同步property
+		一旦改变property时，attribute不会同步property
