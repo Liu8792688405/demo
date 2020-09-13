@@ -16,3 +16,8 @@ property:
 	1.改变property时不会同步attribute
 	2.在没有改变property时，attribute会同步property
 		一旦改变property时，attribute不会同步property
+4.伪类与伪元素选择器
+		/*链接伪类*/		注意:link，:visited，:target是作用于链接元素的！
+				:link		表示作为超链接，并指向一个未访问的地址的所有锚
+				:visited	表示作为超链接，并指向一个已访问的地址的所有锚
+				:target 	代表一个特殊的元素，它的id是URI的片段标识符
